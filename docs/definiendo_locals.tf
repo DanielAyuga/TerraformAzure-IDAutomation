@@ -1,4 +1,4 @@
-locals.tf
+## Definiendo locals.tf
 
 En este archivo, estableceremos dónde tenemos el archivo en formato .json con la información de los usuarios a dar de alta en Azure.
 En este caso, el archivo cuenta con los siguientes campos: nombre, email, departamento y puesto.
