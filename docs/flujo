@@ -1,4 +1,4 @@
-# </h1> TerraformAzure-IDAutomation <h1>
+# TerraformAzure-IDAutomation
 ## Definiendo los providers
 
 terraform {
