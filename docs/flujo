@@ -1,6 +1,6 @@
 # TerraformAzure-IDAutomation
 
-## Definiendo los providers
+## Definiendo providers.tf
 
 En este primer paso, definimos que proveedores vamos a necesitar.
 Los providers contienen la configuración, recursos y datos necesarios para comunicarse con Azure (AWS, GCP..)
@@ -32,3 +32,19 @@ provider "azuread" {                        #¿Que necesita el provider azuread 
   tenant_id     = var.tenant_id             #El ID del tenant será una variable asociada al archivo secrets.tfvars que se explicará después
 }
 
+
+## Definiendo secrets.tfvars
+
+En este archivo de configuración definiremos todos los valores *sensibles* y que no se incluiran dentro de la configuración
+En el archivo .gitignore indicaremos que este archivo no se suba a git y por lo tanto no pertenezca a un control de versiones
+  .[!IMPORTANTE].
+
+tenant_id       = "XXXXXX-XXXX-XXXX-XXXX-XXXXXXX"
+subscription_id = "XXXXXX-XXXX-XXXX-XXXX-XXXXXXX"
+
+passwords = {
+   "laura.fernandez@ejemplo.onmicrosoft.com" = "contraseñasegura1!"
+   "roberto.lopez@ejemplo.onmicrosoft.com" = "contraseñasegura2!"
+   "beatriz.martin@ejemplo.onmicrosoft.com" = "contraseñasegura3!"
+   "miguel.torres@ejemplo.onmicrosoft.com" = "contraseñasegura4!"
+}
