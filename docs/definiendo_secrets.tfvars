@@ -1,3 +1,5 @@
+##Definiendo secrets.tfvars
+
 [¡IMPORTANTE!]
     -NO poner nunca contraseñas como texto plano en la configuración
     -Usaremos secrets.tfvars para pasar estas credenciales
