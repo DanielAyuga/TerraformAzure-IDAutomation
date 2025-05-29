@@ -1,0 +1,26 @@
+[
+  { 
+	"nombre": "Laura Fernández",
+	"email": "laura.fernandez@ejemplo.onmicrosoft.com",
+	"departamento": "frontend",
+	"puesto": "n2"
+  },
+  { 
+	"nombre": "Roberto López",
+	"email": "roberto.lopez@ejemplo.onmicrosoft.com",
+	"departamento": "backend",
+	"puesto": "n1"
+  },
+  { 
+	"nombre": "Beatriz Martín",
+	"email": "beatriz.martin@ejemplo.onmicrosoft.com",
+	"departamento": "frontend",
+	"puesto": "n1"
+  },
+  { 
+	"nombre": "Miguel Torres",
+	"email": "miguel.torres@ejemplo.onmicrosoft.com",
+	"departamento": "backend",
+	"puesto": "n2" 
+  }
+]
