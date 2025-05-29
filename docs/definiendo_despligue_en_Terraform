@@ -1,5 +1,7 @@
 ## Definiendo despligue_en_Terraform
 
+az login                               #Inicia sesión en tu suscripción
+
 terraform init                         #Descarga los providers, incia módulos y configura el estado
 Initializing the backend...
 Initializing provider plugins...
