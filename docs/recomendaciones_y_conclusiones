@@ -1,0 +1,28 @@
+Mis recomendaciones y conclusiones son:
+
+  -Pensar en qué quieres hacer antes de empezar a escribir la configuración:
+      Al ser una estructura de archivos dependientes unos de otros, no tener un mapa claro de lo que quieres realizar
+      te hará tener que reescribir el código varias veces, lo que puede dar lugar a error.
+
+  -Usar "secrets.tfvars" siempre que vayas a pasar datos sensibles. Es muy importante que nuestro proyecto sea SEGURO:
+      Pasar la información a través de este archivo también nos va a ayudar a que el archivo sea reutilizable ya que la
+      información no se almacenará en el código. Modificando las variables puede ser reutilizado.
+
+  -A la hora de crear el archivo con los usuarios, define atributos de forma simple y unificada:
+      Procurar no llamar a un departamento "Dev" a otro "dev", a otro "Desarrollo". El proyecto tiene que tener coherencia
+      y continuidad desde el principio.
+
+  -Coherencia y continuidad también en las variables. Saber como llamamos a las variables y hacer referencia a ellas:
+      No tener esto claro nos va a dar muchos errores a la hora de desplegar la infrastructura en Terraform ya que no va a encontrar
+      los datos necesarios al no estar correctamente relacionados. SIEMPRE que puedas utiliza variables para que sea reutilizable.
+
+  -Se ordenado:
+      Intenta darle un sentido lógico a la implementación. Aunque no influya para el despliegue el orden de creación, es mejor no mezclar las cosas. 
+      ¿Mis usuarios van a estar asignados a un resource group?, entonces en mi código creo primero los resource groups y luego creo los usuarios.
+      ¿Los permisos se los voy a asignar a los usuarios que estoy creando?. Primero creo los usuarios y despues asigno los roles.
+          -> resource group -> usuario -> rol
+
+  -Seguridad de identidades:
+      De forma mínima, por lo menos tienes que hacer 2 cosas al dar de alta identidades en tu tenant.
+          -Forzar a cambiar la contraseña asignada por el administrador
+          -Configurar el segundo factor de autenticación (2FA) para añadirle una capa mas de seguridad a la identidad.
