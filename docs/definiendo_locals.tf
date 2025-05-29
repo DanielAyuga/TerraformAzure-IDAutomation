@@ -15,7 +15,7 @@ En este caso, el archivo cuenta con los siguientes campos: nombre, email, depart
 
 locals {                                                                     #Definimos que "users" será el valor que pasaremos en el archivo variables.
   users = { for user in jsondecode(file("${path.module}/users.json")) :      #Esto declara que: Iteramos sobre cada elemento del archivo json (despues de decodificarlo)
-    user.email => user                                                        donde cada usuario tendrá como clave el email.
+    user.email => user                                                       #Donde cada usuario tendrá como clave el email.
   }
 }
 
