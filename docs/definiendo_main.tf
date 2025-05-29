@@ -40,7 +40,7 @@ resource "azuread_user" "users" {                                  #Indicamos co
 resource "azurerm_role_assignment" "usuarios" {                                #Indicamos con "azurerm_role_assignment" que el objeto que vamos a crear es una asignacion de rol
   for_each = { for usuario in local.users : usuario.email => usuario }         #Iteramos sobre un listado (se indica que esta en local y se llama users "local.users" y crea un objeto por cada email de la lista
 
-  principal_id         = azuread_user.usuarios[each.value.email].object_id     #Define que principal_id será igual que el object_id que Azure crea al dar de alta el usuario usando como clave su email
+  principal_id         = azuread_user.users[each.value.email].object_id     #Define que principal_id será igual que el object_id que Azure crea al dar de alta el usuario usando como clave su email
   scope                = each.value.departamento == "frontend" ? azurerm_resource_group.frontend.id : azurerm_resource_group.backend.id  #Define SI el departamento (asignado en el json) = frontend, lo dará de alta en el resource group de frontend. Si no cumple esto lo dará de alta en backend
   role_definition_name = each.value.puesto == "n1" ? "Reader" : "Contributor"  #Define SI el puesto (asignado en el json) = n1, le asignará el rol de Reader. Si no cumple esto, le asignará el rol Contributor (para el puesto n2)
 }
