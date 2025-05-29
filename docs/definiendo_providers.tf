@@ -22,10 +22,9 @@ terraform {
 provider "azurerm" {                        #¿Que necesita el provider azurerm para poder crear/modificar/eliminar recursos?
   features {}
 
-  subscription_id = var.subscription_id     #El ID de la suscripción será una variable asociada al archivo secrets.tfvars
-  tenant_id       = var.tenant_id           #El ID del tenant será una variable asociada al archivo secrets.tfvars que se explicará después
+  subscription_id = var.subscription_id     #El ID de la suscripción que será una variable asociada al archivo secrets.tfvars
 }
 
 provider "azuread" {                        #¿Que necesita el provider azuread para poder crear/modificar/eliminar usuarios?
-  tenant_id     = var.tenant_id             #El ID del tenant será una variable asociada al archivo secrets.tfvars
+  tenant_id     = var.tenant_id             #El ID del tenant que será una variable asociada al archivo secrets.tfvars
 }
