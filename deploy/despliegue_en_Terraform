@@ -1,3 +1,5 @@
+az login
+
 terraform init
 
 Initializing the backend...
