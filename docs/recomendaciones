@@ -24,5 +24,5 @@ Mis recomendaciones son:
 
   -Seguridad de identidades:
       De forma mínima, por lo menos tienes que hacer 2 cosas al dar de alta identidades en tu tenant.
-          -Forzar a cambiar la contraseña asignada por el administrador
+          -Forzar a cambiar la contraseña asignada por el administrador en el primer inicio de sesión del usuario.
           -Configurar el segundo factor de autenticación (2FA) para añadirle una capa mas de seguridad a la identidad.
