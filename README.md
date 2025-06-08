@@ -1,5 +1,5 @@
 # TerraformAzure-IDAutomation
-## Creación de usuarios y asignación de roles automática en Terraform para Azure
+## Creación de usuarios en EntraID y asignación de roles automática en función de atributos de usuario
 
 ### En este proyecto me centraré en:
 - La creación de usuarios en Azure mediante un archivo.json almacenadado localmente.
